@@ -1,0 +1,142 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_PIC16:PIC16F628-xxISO U?
+U 1 1 61EDCCDB
+P 2600 2200
+F 0 "U?" H 2600 3081 50  0000 C CNN
+F 1 "PIC16F628-xxISO" H 2600 2990 50  0000 C CNN
+F 2 "" H 2600 2200 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/40300c.pdf" H 2600 2200 50  0001 C CNN
+	1    2600 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Crystal Y?
+U 1 1 61EDD49B
+P 4600 2500
+F 0 "Y?" H 4600 2232 50  0000 C CNN
+F 1 "Crystal" H 4600 2323 50  0000 C CNN
+F 2 "" H 4600 2500 50  0001 C CNN
+F 3 "~" H 4600 2500 50  0001 C CNN
+	1    4600 2500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 61EDF91A
+P 4850 2700
+F 0 "C?" H 4965 2746 50  0000 L CNN
+F 1 "C" H 4965 2655 50  0000 L CNN
+F 2 "" H 4888 2550 50  0001 C CNN
+F 3 "~" H 4850 2700 50  0001 C CNN
+	1    4850 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 61EDFD93
+P 4300 2700
+F 0 "C?" H 4415 2746 50  0000 L CNN
+F 1 "C" H 4415 2655 50  0000 L CNN
+F 2 "" H 4338 2550 50  0001 C CNN
+F 3 "~" H 4300 2700 50  0001 C CNN
+	1    4300 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 2500 4300 2500
+Wire Wire Line
+	4300 2500 4300 2550
+Wire Wire Line
+	4750 2500 4850 2500
+Wire Wire Line
+	4850 2500 4850 2550
+Wire Wire Line
+	4300 2500 3700 2500
+Connection ~ 4300 2500
+Wire Wire Line
+	4850 2500 4850 2100
+Wire Wire Line
+	4850 2100 4300 2100
+Wire Wire Line
+	4300 2100 4300 2400
+Wire Wire Line
+	4300 2400 3700 2400
+Connection ~ 4850 2500
+$Comp
+L power:GND #PWR?
+U 1 1 61EE097A
+P 4300 3050
+F 0 "#PWR?" H 4300 2800 50  0001 C CNN
+F 1 "GND" H 4305 2877 50  0000 C CNN
+F 2 "" H 4300 3050 50  0001 C CNN
+F 3 "" H 4300 3050 50  0001 C CNN
+	1    4300 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 2850 4300 2950
+Wire Wire Line
+	4300 2950 4850 2950
+Wire Wire Line
+	4850 2950 4850 2850
+Connection ~ 4300 2950
+Wire Wire Line
+	4300 2950 4300 3050
+Text GLabel 2250 1300 0    50   Input ~ 0
+Vcc
+Wire Wire Line
+	2250 1300 2600 1300
+Wire Wire Line
+	2600 1300 2600 1500
+$Comp
+L power:GND #PWR?
+U 1 1 61EE151D
+P 2600 3050
+F 0 "#PWR?" H 2600 2800 50  0001 C CNN
+F 1 "GND" H 2605 2877 50  0000 C CNN
+F 2 "" H 2600 3050 50  0001 C CNN
+F 3 "" H 2600 3050 50  0001 C CNN
+	1    2600 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 2900 2600 3050
+Wire Wire Line
+	2600 1300 4100 1300
+Wire Wire Line
+	4100 1300 4100 2300
+Wire Wire Line
+	4100 2300 3700 2300
+Connection ~ 2600 1300
+Text GLabel 1150 1900 0    50   Input ~ 0
+WLINE_RX
+Wire Wire Line
+	1150 1900 1500 1900
+Text GLabel 1150 2000 0    50   Input ~ 0
+WLINE_TX
+Wire Wire Line
+	1500 2000 1150 2000
+Text GLabel 1100 2100 0    50   Input ~ 0
+IGNITION
+Wire Wire Line
+	1100 2100 1500 2100
+Text GLabel 1150 1800 0    50   Input ~ 0
+LOW_BEAM
+Wire Wire Line
+	1150 1800 1500 1800
+$EndSCHEMATC
