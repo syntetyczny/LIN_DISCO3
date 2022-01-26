@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MCU_Microchip_PIC16:PIC16F628-xxISO U1
-U 1 1 61EDCCDB
-P 2600 2200
-F 0 "U1" H 2600 3081 50  0000 C CNN
-F 1 "PIC16F628-xxISO" H 2600 2990 50  0000 C CNN
-F 2 "Package_SO:SOIC-18W_7.5x11.6mm_P1.27mm" H 2600 2200 50  0001 C CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/40300c.pdf" H 2600 2200 50  0001 C CNN
-	1    2600 2200
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:Crystal Rez1
 U 1 1 61EDD49B
 P 4600 2500
@@ -117,11 +106,9 @@ $EndComp
 Wire Wire Line
 	2600 2900 2600 3050
 Wire Wire Line
-	2600 1300 4100 1300
+	2600 1300 4250 1300
 Wire Wire Line
-	4100 1300 4100 2300
-Wire Wire Line
-	4100 2300 3700 2300
+	4250 2300 4200 2300
 Connection ~ 2600 1300
 Text GLabel 1150 1900 0    50   Input ~ 0
 WLINE_RX
@@ -179,8 +166,6 @@ NoConn ~ 3700 2100
 NoConn ~ 3700 2200
 NoConn ~ 1500 2200
 NoConn ~ 1500 2300
-NoConn ~ 1500 2400
-NoConn ~ 1500 2500
 Text GLabel 7100 2050 2    50   Input ~ 0
 WLINE_RX
 Wire Wire Line
@@ -190,9 +175,9 @@ WLINE_TX
 Wire Wire Line
 	6900 1950 7100 1950
 NoConn ~ 6900 2150
-Text GLabel 1250 5200 2    50   Input ~ 0
-IGNITION
 Text GLabel 1250 5300 2    50   Input ~ 0
+IGNITION
+Text GLabel 1250 5200 2    50   Input ~ 0
 LOW_BEAM
 $Comp
 L Device:R R3
@@ -502,4 +487,87 @@ Wire Wire Line
 	1650 5500 1650 5550
 Wire Wire Line
 	900  5500 1650 5500
+Text GLabel 1150 2400 0    50   Input ~ 0
+CLK
+Wire Wire Line
+	1150 2400 1500 2400
+Text GLabel 1150 2500 0    50   Input ~ 0
+DATA_IO
+Wire Wire Line
+	1150 2500 1500 2500
+$Comp
+L MCU_Microchip_PIC16:PIC16F628-xxISO U1
+U 1 1 61EDCCDB
+P 2600 2200
+F 0 "U1" H 2600 3081 50  0000 C CNN
+F 1 "PIC16F628-xxISO" H 2600 2990 50  0000 C CNN
+F 2 "Package_SO:SOIC-18W_7.5x11.6mm_P1.27mm" H 2600 2200 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/40300c.pdf" H 2600 2200 50  0001 C CNN
+	1    2600 2200
+	1    0    0    -1  
+$EndComp
+Text GLabel 3950 2000 2    50   Input ~ 0
+Vpp
+$Comp
+L Connector:Conn_01x05_Male ICSP1
+U 1 1 61FBFCDB
+P 700 4700
+F 0 "ICSP1" H 808 5081 50  0000 C CNN
+F 1 "Conn_01x05_Male" H 808 4990 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 700 4700 50  0001 C CNN
+F 3 "~" H 700 4700 50  0001 C CNN
+	1    700  4700
+	1    0    0    -1  
+$EndComp
+Text GLabel 1250 4500 2    50   Input ~ 0
+Vcc
+$Comp
+L power:GND #PWR0108
+U 1 1 61FC163B
+P 1550 4600
+F 0 "#PWR0108" H 1550 4350 50  0001 C CNN
+F 1 "GND" H 1555 4427 50  0000 C CNN
+F 2 "" H 1550 4600 50  0001 C CNN
+F 3 "" H 1550 4600 50  0001 C CNN
+	1    1550 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  4500 1250 4500
+Wire Wire Line
+	900  4600 1550 4600
+Text GLabel 1250 4700 2    50   Input ~ 0
+Vpp
+Wire Wire Line
+	1250 4700 900  4700
+Text GLabel 1250 4800 2    50   Input ~ 0
+CLK
+Text GLabel 1250 4900 2    50   Input ~ 0
+DATA_IO
+Wire Wire Line
+	1250 4800 900  4800
+Wire Wire Line
+	900  4900 1250 4900
+$Comp
+L Device:R R?
+U 1 1 61FDA942
+P 4050 2300
+F 0 "R?" V 3843 2300 50  0000 C CNN
+F 1 "10k" V 3934 2300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3980 2300 50  0001 C CNN
+F 3 "~" H 4050 2300 50  0001 C CNN
+	1    4050 2300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3900 2300 3850 2300
+Wire Wire Line
+	4250 1300 4250 2300
+Wire Wire Line
+	3950 2000 3850 2000
+Wire Wire Line
+	3850 2000 3850 2300
+Connection ~ 3850 2300
+Wire Wire Line
+	3850 2300 3700 2300
 $EndSCHEMATC
