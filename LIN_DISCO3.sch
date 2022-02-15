@@ -184,7 +184,7 @@ U 1 1 61F0371E
 P 5150 5300
 F 0 "D2" V 5196 5221 50  0000 R CNN
 F 1 "D_Zener_5V6" V 5105 5221 50  0000 R CNN
-F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5150 5300 50  0001 C CNN
+F 2 "Diode_SMD:D_2512_6332Metric_Castellated" H 5150 5300 50  0001 C CNN
 F 3 "~" H 5150 5300 50  0001 C CNN
 	1    5150 5300
 	0    -1   -1   0   
@@ -195,7 +195,7 @@ U 1 1 61F0512B
 P 4900 5700
 F 0 "D1" V 4854 5779 50  0000 L CNN
 F 1 "D_Zener_5V6" V 4945 5779 50  0000 L CNN
-F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4900 5700 50  0001 C CNN
+F 2 "Diode_SMD:D_MiniMELF_Handsoldering" H 4900 5700 50  0001 C CNN
 F 3 "~" H 4900 5700 50  0001 C CNN
 	1    4900 5700
 	0    1    1    0   
@@ -505,17 +505,6 @@ Wire Wire Line
 Text Notes 7750 750  0    50   ~ 0
 https://m0agx.eu/2018/01/02/reading-obd2-data-without-elm327-part-2-k-line/\nhttps://www.avrfreaks.net/forum/transistor-level-shift-explanation-obd2
 $Comp
-L Transistor_BJT:BC338 Q1
-U 1 1 620921E1
-P 6400 2100
-F 0 "Q1" H 6591 2146 50  0000 L CNN
-F 1 "BC338" H 6591 2055 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 6600 2025 50  0001 L CIN
-F 3 "http://diotec.com/tl_files/diotec/files/pdf/datasheets/bc337" H 6400 2100 50  0001 L CNN
-	1    6400 2100
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R6
 U 1 1 62093D29
 P 6100 1950
@@ -552,17 +541,6 @@ F 1 "GND" H 7155 2227 50  0000 C CNN
 F 2 "" H 7150 2400 50  0001 C CNN
 F 3 "" H 7150 2400 50  0001 C CNN
 	1    7150 2400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Transistor_BJT:BC338 Q2
-U 1 1 620B23DD
-P 7050 2100
-F 0 "Q2" H 7241 2146 50  0000 L CNN
-F 1 "BC338" H 7241 2055 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7250 2025 50  0001 L CIN
-F 3 "http://diotec.com/tl_files/diotec/files/pdf/datasheets/bc337" H 7050 2100 50  0001 L CNN
-	1    7050 2100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -634,7 +612,7 @@ U 1 1 621098EA
 P 6500 2900
 F 0 "D4" V 6450 2700 50  0000 L CNN
 F 1 "D_Zener_5V6" V 6600 2350 50  0000 L CNN
-F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6500 2900 50  0001 C CNN
+F 2 "Diode_SMD:D_MiniMELF_Handsoldering" H 6500 2900 50  0001 C CNN
 F 3 "~" H 6500 2900 50  0001 C CNN
 	1    6500 2900
 	0    1    1    0   
@@ -713,6 +691,28 @@ F 1 "2K" H 7920 2405 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7780 2450 50  0001 C CNN
 F 3 "~" H 7850 2450 50  0001 C CNN
 	1    7850 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC847 Q1
+U 1 1 620C022A
+P 6400 2100
+F 0 "Q1" H 6591 2146 50  0000 L CNN
+F 1 "BC847" H 6591 2055 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6600 2025 50  0001 L CIN
+F 3 "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657" H 6400 2100 50  0001 L CNN
+	1    6400 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC847 Q2
+U 1 1 620C0B3E
+P 7050 2100
+F 0 "Q2" H 7241 2146 50  0000 L CNN
+F 1 "BC847" H 7241 2055 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7250 2025 50  0001 L CIN
+F 3 "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657" H 7050 2100 50  0001 L CNN
+	1    7050 2100
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
