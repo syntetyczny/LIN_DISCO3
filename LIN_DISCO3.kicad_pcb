@@ -169,7 +169,7 @@
     (descr "Crystal THT HC-49/U http://5hertz.com/pdfs/04404_D.pdf")
     (tags "THT crystalHC-49/U")
     (path /61EDD49B)
-    (fp_text reference Rez1 (at 2.44 -3.525) (layer F.SilkS)
+    (fp_text reference Rez1 (at 2.44 -3.525) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 18.432MHz (at 2.44 3.525) (layer F.Fab)
